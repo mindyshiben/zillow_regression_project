@@ -11,10 +11,10 @@ def get_zillow_data():
     
     else:
         sql = """
-        SELECT parcelid, bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, yearbuilt, taxamount, fips, assessmentyear, landtaxvaluedollarcnt, lotsizesquarefeet, latitude, longitude
+        SELECT parcelid, bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, fireplacecnt, garagecarcnt, poolcnt, yearbuilt, taxamount, fips, assessmentyear, landtaxvaluedollarcnt, lotsizesquarefeet, calculatedbathnbr, latitude, longitude
         FROM properties_2017
         JOIN predictions_2017 USING (parcelid)
-        WHERE transactiondate LIKE '2017%%'  and propertylandusetypeid = 261;
+        WHERE transactiondate LIKE '2017%%' and propertylandusetypeid = 261;
         """
 
         df = pd.read_sql(sql, get_db_url('zillow'))
@@ -56,7 +56,7 @@ def get_zillow_other():
     
     else:
         sql = """
-        SELECT parcelid, fireplacecnt, garagecarcnt, poolcnt
+        SELECT parcelid
         FROM properties_2017
         JOIN predictions_2017 USING (parcelid)
         WHERE transactiondate LIKE '2017%%'  and propertylandusetypeid = 261;
