@@ -11,7 +11,7 @@ def get_zillow_data():
     
     else:
         sql = """
-        SELECT parcelid, bedroomcnt, bathroomcnt, calculatedfinishedsquarefeet, taxvaluedollarcnt, fireplacecnt, garagecarcnt, poolcnt, yearbuilt, taxamount, fips, assessmentyear, landtaxvaluedollarcnt, lotsizesquarefeet, calculatedbathnbr, latitude, longitude
+        SELECT parcelid, taxvaluedollarcnt, bedroomcnt, bathroomcnt, yearbuilt, fips, calculatedfinishedsquarefeet, lotsizesquarefeet, latitude, longitude
         FROM properties_2017
         JOIN predictions_2017 USING (parcelid)
         WHERE transactiondate LIKE '2017%%' and propertylandusetypeid = 261;
