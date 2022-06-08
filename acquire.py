@@ -43,10 +43,23 @@ def get_zillow_locs():
         return df
 
 def get_zillow_zips():
-    filename = 'train_zips.csv'
+    filename = 'zips_df.csv'
 
     if os.path.isfile(filename):
         return pd.read_csv(filename)
+    
+    else:
+        sql = """
+        SELECT parcelid, latitude, longitude
+        FROM properties_2017
+        WHERE propertylandusetypeid = 261;
+        """
+
+        df = pd.read_sql(sql, get_db_url('zillow'))
+
+        df.to_csv(filename)
+
+        return df
 
 def get_zillow_other():
     filename = 'zillow_other.csv'
