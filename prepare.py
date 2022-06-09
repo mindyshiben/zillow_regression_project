@@ -9,6 +9,10 @@ from sklearn.model_selection import train_test_split
 
 def printmd(string):
     display(Markdown(string))
+
+    '''  
+    This function takes a string (a print statement) and returns the print statement in bold text"
+    '''
     
 def zillow_summary(df):
     print()
@@ -38,8 +42,14 @@ def zillow_summary(df):
     printmd('*Average Lot Size: {:,} square feet*'
      .format(round(df['lot_size'].mean())))
 
-def train_validate_test_split(df, seed=123):
-    train_validate_test = train_test_split(df, test_size=0.2, 
-                                            random_state=seed)
-    train_validate = train_test_split(train_validate, test_size=0.3,
-                                       random_state=seed)
+def split_zillow_data(df):
+    
+    '''
+    This function takes in a dataframe and splits it into three subgroups: train, test, validate
+    for proper evalution, statistical testing, and modeling. Three dataframes are returned.
+    '''
+
+    train, test = train_test_split(df, test_size=.2, random_state=123)
+    train, validate = train_test_split(train, test_size=.3, random_state=123)
+    
+    return train, validate, test
