@@ -8,8 +8,6 @@
 - Empower zillow executives to improve the current predictions using my recommentations.
 - Thoroughly document the process and key findings.
 
-![zillowpic.png](attachment:zillowpic.png)
-
 ### Hypotheses :
 
 > #1.)  Location - Based on basic domain knowledge, I believe location plays a large role in determining tax assessed property value. While the county may be a driver of the target(tax assessed property value), I'd like to dive deeper by narrowing in on location even further. Location determines other unknown attributes (such as proximity to the ocean, school district, etc.) which could greatly impact tax assessed value. Zip codes in the original data are incorrect and do not align with properties in California. Therefore, I will attempt to use latitude and longitude coordinates to explore the notion that location may drive the target variable.
@@ -22,17 +20,17 @@
 
 ### Data Dictionary:
 
-parcelid: property identifier
-bedroomcnt: bedroom count of property
-bathroomcnt: bathroom count of property
-yearbuilt: property's year built
-fips: county of property
-calculatedfinishedsquarefeet: square footage of property
-lotsizesquarefeet: square footage of property's lot/land
-latitude: latitude coordinate of property
-longitude: longitude coordinate of property
-Project Planning (lay out your process through the data science pipeline):
-data acquistion, preparation, exploratory data analysis and statistical testing, modeling, and model evaluation
+- parcelid: property identifier
+- bedroomcnt: bedroom count of property
+- bathroomcnt: bathroom count of property
+- yearbuilt: property's year built
+- fips: county of property
+- calculatedfinishedsquarefeet: square footage of property
+- lotsizesquarefeet: square footage of property's lot/land
+- latitude: latitude coordinate of property
+- longitude: longitude coordinate of property
+- Project Planning (lay out your process through the data science pipeline):
+- data acquistion, preparation, exploratory data analysis and statistical testing, modeling, and model evaluation
 
 
 ### Key Findings, Recommendations, and Takeaways
