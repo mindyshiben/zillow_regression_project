@@ -29,8 +29,6 @@
 - lotsizesquarefeet: square footage of property's lot/land
 - latitude: latitude coordinate of property
 - longitude: longitude coordinate of property
-- Project Planning (lay out your process through the data science pipeline):
-- data acquistion, preparation, exploratory data analysis and statistical testing, modeling, and model evaluation
 
 
 ### Key Findings, Recommendations, and Takeaways
@@ -49,5 +47,5 @@
 - This model is ready for utilization and I strongly recommend Zillow to employ this model to predict tax assessed property value as soon as possible.
 
 ### Reproducing this project
-Acquire and utilize credentials to access the Zillow database. Store credentials and database access in a env.py file and create a .gitignore which includes env.py to protect your credentials. Replicate zillow_final_report.ipynb, acquire.py, and wrangle.py from this repository. 
+Acquire and utilize credentials to access the Zillow database. Store credentials and database access in a env.py file and create a .gitignore which includes env.py to protect your credentials. Replicate zillow_final_report.ipynb, acquire.py, wrangle.py, acquire.py from this repository. 
 
